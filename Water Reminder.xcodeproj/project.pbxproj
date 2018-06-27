@@ -14,6 +14,18 @@
 		C0154B4920DE2CA00043CEA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0154B4720DE2CA00043CEA2 /* LaunchScreen.storyboard */; };
 		C0154B5420DE2CA10043CEA2 /* Water_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0154B5320DE2CA10043CEA2 /* Water_ReminderTests.swift */; };
 		C0154B5F20DE2CA10043CEA2 /* Water_ReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0154B5E20DE2CA10043CEA2 /* Water_ReminderUITests.swift */; };
+		C04373B220DE349000FA308A /* UserDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04373B120DE349000FA308A /* UserDataController.swift */; };
+		C04373B620DE55CD00FA308A /* UserConfigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04373B520DE55CD00FA308A /* UserConfigController.swift */; };
+		C04373B820DE870700FA308A /* FileLoadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04373B720DE870700FA308A /* FileLoadController.swift */; };
+		C04373BA20DE994300FA308A /* WaterReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04373B920DE994300FA308A /* WaterReminder.swift */; };
+		C04373BC20DE9BC300FA308A /* WaterAlarmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04373BB20DE9BC300FA308A /* WaterAlarmTableViewController.swift */; };
+		C04373C020DE9C3300FA308A /* WaterAlarmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04373BF20DE9C3300FA308A /* WaterAlarmCell.swift */; };
+		C0FEAC2820E0C1D300B7035A /* EditWaterAlarmTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEAC2720E0C1D300B7035A /* EditWaterAlarmTableViewController.swift */; };
+		C0FEAC2B20E0E25600B7035A /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0FEAC2A20E0E25500B7035A /* HealthKit.framework */; };
+		C0FEAC2E20E0F5C900B7035A /* RecordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEAC2D20E0F5C900B7035A /* RecordsTableViewController.swift */; };
+		C0FEAC3020E0FC7B00B7035A /* WaterRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEAC2F20E0FC7B00B7035A /* WaterRecordCell.swift */; };
+		C0FEAC3220E1020F00B7035A /* DayDrinkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEAC3120E1020F00B7035A /* DayDrinkTableViewController.swift */; };
+		C0FEAC3C20E1052600B7035A /* WaterDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FEAC3B20E1052600B7035A /* WaterDataCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +59,19 @@
 		C0154B5A20DE2CA10043CEA2 /* Water ReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Water ReminderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0154B5E20DE2CA10043CEA2 /* Water_ReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water_ReminderUITests.swift; sourceTree = "<group>"; };
 		C0154B6020DE2CA10043CEA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C04373B120DE349000FA308A /* UserDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataController.swift; sourceTree = "<group>"; };
+		C04373B520DE55CD00FA308A /* UserConfigController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigController.swift; sourceTree = "<group>"; };
+		C04373B720DE870700FA308A /* FileLoadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLoadController.swift; sourceTree = "<group>"; };
+		C04373B920DE994300FA308A /* WaterReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterReminder.swift; sourceTree = "<group>"; };
+		C04373BB20DE9BC300FA308A /* WaterAlarmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAlarmTableViewController.swift; sourceTree = "<group>"; };
+		C04373BF20DE9C3300FA308A /* WaterAlarmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAlarmCell.swift; sourceTree = "<group>"; };
+		C0FEAC2720E0C1D300B7035A /* EditWaterAlarmTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWaterAlarmTableViewController.swift; sourceTree = "<group>"; };
+		C0FEAC2A20E0E25500B7035A /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		C0FEAC2C20E0E25600B7035A /* Water Reminder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Water Reminder.entitlements"; sourceTree = "<group>"; };
+		C0FEAC2D20E0F5C900B7035A /* RecordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsTableViewController.swift; sourceTree = "<group>"; };
+		C0FEAC2F20E0FC7B00B7035A /* WaterRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRecordCell.swift; sourceTree = "<group>"; };
+		C0FEAC3120E1020F00B7035A /* DayDrinkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDrinkTableViewController.swift; sourceTree = "<group>"; };
+		C0FEAC3B20E1052600B7035A /* WaterDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDataCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FEAC2B20E0E25600B7035A /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +107,7 @@
 				C0154B5220DE2CA10043CEA2 /* Water ReminderTests */,
 				C0154B5D20DE2CA10043CEA2 /* Water ReminderUITests */,
 				C0154B3C20DE2C9F0043CEA2 /* Products */,
+				C0FEAC2920E0E25500B7035A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +124,24 @@
 		C0154B3D20DE2C9F0043CEA2 /* Water Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				C0FEAC2C20E0E25600B7035A /* Water Reminder.entitlements */,
+				C0FEAC2720E0C1D300B7035A /* EditWaterAlarmTableViewController.swift */,
 				C0154B3E20DE2C9F0043CEA2 /* AppDelegate.swift */,
 				C0154B4020DE2C9F0043CEA2 /* ViewController.swift */,
 				C0154B4220DE2C9F0043CEA2 /* Main.storyboard */,
+				C0FEAC3120E1020F00B7035A /* DayDrinkTableViewController.swift */,
+				C0FEAC3B20E1052600B7035A /* WaterDataCell.swift */,
+				C04373B920DE994300FA308A /* WaterReminder.swift */,
+				C04373BB20DE9BC300FA308A /* WaterAlarmTableViewController.swift */,
+				C04373BF20DE9C3300FA308A /* WaterAlarmCell.swift */,
+				C0154B4A20DE2CA00043CEA2 /* Info.plist */,
 				C0154B4520DE2CA00043CEA2 /* Assets.xcassets */,
 				C0154B4720DE2CA00043CEA2 /* LaunchScreen.storyboard */,
-				C0154B4A20DE2CA00043CEA2 /* Info.plist */,
+				C04373B120DE349000FA308A /* UserDataController.swift */,
+				C04373B520DE55CD00FA308A /* UserConfigController.swift */,
+				C04373B720DE870700FA308A /* FileLoadController.swift */,
+				C0FEAC2D20E0F5C900B7035A /* RecordsTableViewController.swift */,
+				C0FEAC2F20E0FC7B00B7035A /* WaterRecordCell.swift */,
 			);
 			path = "Water Reminder";
 			sourceTree = "<group>";
@@ -123,6 +162,14 @@
 				C0154B6020DE2CA10043CEA2 /* Info.plist */,
 			);
 			path = "Water ReminderUITests";
+			sourceTree = "<group>";
+		};
+		C0FEAC2920E0E25500B7035A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0FEAC2A20E0E25500B7035A /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +240,11 @@
 				TargetAttributes = {
 					C0154B3A20DE2C9F0043CEA2 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					C0154B4E20DE2CA10043CEA2 = {
 						CreatedOnToolsVersion = 9.3;
@@ -256,7 +308,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FEAC3C20E1052600B7035A /* WaterDataCell.swift in Sources */,
+				C04373B820DE870700FA308A /* FileLoadController.swift in Sources */,
+				C0FEAC3020E0FC7B00B7035A /* WaterRecordCell.swift in Sources */,
 				C0154B4120DE2C9F0043CEA2 /* ViewController.swift in Sources */,
+				C0FEAC2820E0C1D300B7035A /* EditWaterAlarmTableViewController.swift in Sources */,
+				C04373B220DE349000FA308A /* UserDataController.swift in Sources */,
+				C04373C020DE9C3300FA308A /* WaterAlarmCell.swift in Sources */,
+				C04373BC20DE9BC300FA308A /* WaterAlarmTableViewController.swift in Sources */,
+				C04373BA20DE994300FA308A /* WaterReminder.swift in Sources */,
+				C0FEAC2E20E0F5C900B7035A /* RecordsTableViewController.swift in Sources */,
+				C0FEAC3220E1020F00B7035A /* DayDrinkTableViewController.swift in Sources */,
+				C04373B620DE55CD00FA308A /* UserConfigController.swift in Sources */,
 				C0154B3F20DE2C9F0043CEA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +493,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Water Reminder/Water Reminder.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E3HHUKQLUY;
 				INFOPLIST_FILE = "Water Reminder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,7 +512,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Water Reminder/Water Reminder.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E3HHUKQLUY;
 				INFOPLIST_FILE = "Water Reminder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

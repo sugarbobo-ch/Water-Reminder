@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import UserNotifications
+//import HealthKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: { granted, error in
+            if granted {
+                print("UserNotifications access")
+            }
+            else {
+                print("UserNotifications denied")
+            }
+            
+        })
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        UNUserNotificationCenter.current().delegate = self
+        let drink = UNNotificationAction(identifier: "drink", title: "馬上喝", options: [.foreground])
+        let drink100 = UNNotificationAction(identifier: "drink100", title: "喝一口", options: [])
+        let drink250 = UNNotificationAction(identifier: "drink250", title: "喝一杯水", options: [])
+        let category = UNNotificationCategory(identifier: "message", actions: [drink, drink100, drink250], intentIdentifiers: [], options: [])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+
+        /*
+        if HKHealthStore.isHealthDataAvailable() {
+            var shareTypes = Set<HKSampleType>()
+            shareTypes.insert(HKObjectType.quantityType(forIdentifier: .dietaryWater)!)
+            shareTypes.insert(HKObjectType.quantityType(forIdentifier: .height)!)
+            shareTypes.insert(HKObjectType.quantityType(forIdentifier: .bodyMass)!)
+            //shareTypes.insert(HKObjectType.characteristicType(forIdentifier: .dateOfBirth)!)
+            //shareTypes.insert(HKObjectType.characteristicType(forIdentifier: .biologicalSex)!)
+            
+            var readTypes = Set<HKObjectType>()
+            readTypes.insert(HKObjectType.quantityType(forIdentifier: .dietaryWater)!)
+            readTypes.insert(HKObjectType.quantityType(forIdentifier: .height)!)
+            readTypes.insert(HKObjectType.quantityType(forIdentifier: .bodyMass)!)
+            //readTypes.insert(HKObjectType.characteristicType(forIdentifier: .dateOfBirth)!)
+            //readTypes.insert(HKObjectType.characteristicType(forIdentifier: .biologicalSex)!)
+            healthStore.requestAuthorization(toShare: shareTypes, read: readTypes) { (success, error) in
+                if !success {
+                    HealthStore.success = false
+                }
+                else
+                {
+                    HealthStore.success = true
+                }
+            }
+        }*/
         return true
     }
 
@@ -42,5 +85,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.badge, .sound, .alert])
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler:  @escaping () -> Void) {
+        
+        let actionIdentifier = response.actionIdentifier
+        print("actionIdentifier \(response.actionIdentifier)")
+        if actionIdentifier == "drink100" {
+            AddWaterAmount(amount: 100)
+        }
+        else if actionIdentifier == "drink250" {
+            AddWaterAmount(amount: 250)
+        }
+
+        completionHandler()
+    }
+    
+    func AddWaterAmount(amount: Int){
+        UserProfile.readUserProfileFromFile()
+        UserProfile.userProfile.drinkAmount += amount
+        WaterRecord.readRecordsFromFile()
+        let waterData = WaterData(date: Date(), amount: amount)
+        WaterRecord.updateAndSaveRecord(waterData: waterData)
+        UserProfile.saveToFile()
+    }
 }
 
